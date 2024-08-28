@@ -65,7 +65,7 @@ exports.handler = async(event) => {
 	console.log(`connected as id ${connection.threadId}`);
 
 	try {
-		const [rows, fields] = await connection.execute('SELECT * FROM contacts');
+		const [rows, fields] = await connection.execute('SELECT * FROM engine_cost');
 		console.log(`rows: ${JSON.stringify(rows)}`);
 		console.log(`fields: ${JSON.stringify(fields)}`);
 		const responseBody = {
